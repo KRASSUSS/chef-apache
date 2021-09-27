@@ -19,5 +19,6 @@ template '/var/www/html/index.html' do
   variables(
     :name => 'KRASSUSS'
   )
+  notifies :restart, 'service[apache2]', :immediately
 end
 
